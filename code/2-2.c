@@ -7,7 +7,7 @@ typedef struct student{
 } Student;
 
 int main(int argc, const char* argv[], const char* envp[]){
-    FILE* fp = fopen("sutdent.txt", "r");
+    FILE* fp = fopen("student.txt", "r");
     int count = 0;
     Student students[64];
     
