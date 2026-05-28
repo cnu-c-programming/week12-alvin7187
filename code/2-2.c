@@ -14,14 +14,14 @@ int main(int argc, const char* argv[], const char* envp[]){
     for(int i =0; i<64; i++){
         if(feof(fp) != 0) break;
 
-        fscanf(fp, "%s %d",students[i].name, &students[i].score);
-        count++;
+        if(fscanf(fp, "%s %d",students[i].name, &students[i].score)==2)
+            count++;
     }
 
     int max = 0;
     float avg = 0;
     
-    for(int i = 0; i<count-1; i++){
+    for(int i = 0; i<count; i++){
         if(students[i].score > max)
             max = students[i].score;
 
